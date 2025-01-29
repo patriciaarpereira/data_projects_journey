@@ -8,7 +8,7 @@ Hello everyone! I'm Patrícia 👋
   - 🔛 **SQL**:
       - Files: "SQL Aviation Database 20250118 - Create database (final version).sql" and "SQL Aviation Database 20250120 - Exercises (final version).sql"
       - This is a simple aviation database with information about some airports, airplanes and their models and about the flights.
-        This work was developed for Tecnologia de Base de Dados in PG ANALYTICS & DATA SCIENCE EMPRESARIAL 2024/2025 with translation.
+        This work was developed for "Tecnologia de Base de Dados" in postgraduate Analytics & Data Science Empresarial 2024/2025 with translation.
       - Topics:
       	- WHERE AND ORDER BY
       	- GROUP BY AND HAVING
@@ -19,11 +19,11 @@ Hello everyone! I'm Patrícia 👋
       	- CASE WHEN.
   - 🔛 **Python**:
       - Files: "Blackjack_lists_20250114_finalversion.py" and "Blackjack_numpy_20250114_finalversion.py".
-      - This work about Blackjack game was developed for Algoritmia e Programação em Python in PG ANALYTICS & DATA SCIENCE EMPRESARIAL 2024/2025.
+      - This work about Blackjack game was developed for "Algoritmia e Programação em Python" in postgraduate Analytics & Data Science Empresarial 2024/2025.
       - I developed two files to try to understand the difference between list and array (although I am aware I have still a lot to learn).
   - 🔛 **Power BI**:
       - File: "Bl
-      - This dashboard was developed for 2 Fundamentos de Business Intelligence e Análise de Dados in PG ANALYTICS & DATA SCIENCE EMPRESARIAL 2024/2025.
+      - This dashboard was developed for "Fundamentos de Business Intelligence e Análise de Dados" in postgraduate Analytics & Data Science Empresarial 2024/2025.
       - The database is from https://www.kaggle.com/datasets/vikasukani/loan-eligible-dataset/data.
       - In the following months, I will present a new project with improvements mainly exploring DAX.
   - 🔜 **R**
