@@ -22,11 +22,16 @@ Hello everyone! I'm Patrícia 👋
       - This work about Blackjack game was developed for "Algoritmia e Programação em Python" in postgraduate Analytics & Data Science Empresarial 2024/2025.
       - I developed two files to try to understand the difference between list and array (although I am aware I have still a lot to learn).
   - 🔛 **Power BI**:
-      - File: "Bl
+      - File: "Dashboard Power BI 20250118 - Loan (final version)"
       - This dashboard was developed for "Fundamentos de Business Intelligence e Análise de Dados" in postgraduate Analytics & Data Science Empresarial 2024/2025.
       - The database is from https://www.kaggle.com/datasets/vikasukani/loan-eligible-dataset/data.
       - In the following months, I will present a new project with improvements mainly exploring DAX.
-  - 🔜 **R**
+  - 🔛 **R**:
+      - File "r_pg_datacamp_20250210"
+      - This small work is divided in two main questions: One was developed for "Gestão da Qualidade e Análise Exploratória " in postgraduate Analytics & Data Science Empresarial 2024/2025 and the other one comes from a project in DataCamp.
+      -  Packages/ Libraries:
+        - dplyr
+      	- ggplot2
   - 🔜 **Machine Learning in R**
   - 🔜 **Machine Learning in Python**
       
@@ -36,4 +41,4 @@ Hello everyone! I'm Patrícia 👋
 
 - 📫 How to reach me: pereiraar.patricia@gmail.com
 
-- 📄 This README was created on 2025/01/20 and and has not yet been updated.
+- 📄 This README was created on 2025/01/20 and and updated on 2025/02/10.
