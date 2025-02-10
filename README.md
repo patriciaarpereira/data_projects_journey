@@ -1,8 +1,8 @@
 Hello everyone! I'm Patrícia 👋
 
-- 🎓 I’m **currently learning** SQL, Python and Power BI in my **Data Analysis** postgraduate course in ISLA (2024/2025) and in DataCamp. 
+- 🎓 I’m **currently learning** SQL, Python and Power BI in my **Data Analysis** postgraduate course in ISLA (2024/2025) and in DataCamp (97h+ and counting). 
 - 🌱 I am **also learning** about NoSQL, data architecture, cybersecurity and statistics.
-- 📘 **In the following months**, my postgraduate course will also explore R and Machine Learning in R and Python. I will also explore these fields in DataCamp.
+- 📘 **In the following months**, my postgraduate course will also explore Machine Learning in R and Python. I will also explore these fields in DataCamp.
 
 - 🔭 I will present some **projects** in this repository regarding the different fields I have interest. At this moment: 
   - 🔛 **SQL**:
