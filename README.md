@@ -27,11 +27,11 @@ DataCamp certification "Data Scientist Associate".
 ### Process 🔎
 
 - **CRISP-DM** 
-The project was developed following the Cross Industry Standard Process for Data Mining (CRISP-DM) model. The scripts and presentation slides were aligned with these phases, as shown below.
+  - The project was developed following the Cross Industry Standard Process for Data Mining (CRISP-DM) model. The scripts and presentation slides were aligned with these phases, as shown below.
 
 - **Machine Learning Methodology**
-In the Unsupervised Learning scenario with a K-Means algorithm, the data was preprocessed through OneHotEncoder to convert categorical features into a numerical format, and MinMaxScaler to ensure numerical features contribute equally to the distance calculations. The Elbow method and Silhouette score were used to find the best number of clusters ('k'). The final model shows the data's inherent groupings.
-In the Supervised Learning scenario with a Random Forest algorithm, the data was split into Train (80%) and Test (20%) to ensure unbiased evaluation of the model's ability to generalize. A pipeline, incorporating ColumnTransformer for independent preprocessing of features before cross-validation within Random Search, was crucial to prevent data leakage. Hyperparameter tuning was performed using Random Search with cross-validation, and Recall was chosen as the evaluation metric over accuracy due to an imbalanced target class. The resulting Best Model was then rigorously evaluated on the unseen Test Set to produce the final Random Forest Model.
+  - In the Unsupervised Learning scenario with a K-Means algorithm, the data was preprocessed through OneHotEncoder to convert categorical features into a numerical format, and MinMaxScaler to ensure numerical features contribute equally to the distance calculations. The Elbow method and Silhouette score were used to find the best number of clusters ('k'). The final model shows the data's inherent groupings.
+  - In the Supervised Learning scenario with a Random Forest algorithm, the data was split into Train (80%) and Test (20%) to ensure unbiased evaluation of the model's ability to generalize. A pipeline, incorporating ColumnTransformer for independent preprocessing of features before cross-validation within Random Search, was crucial to prevent data leakage. Hyperparameter tuning was performed using Random Search with cross-validation, and Recall was chosen as the evaluation metric over accuracy due to an imbalanced target class. The resulting Best Model was then rigorously evaluated on the unseen Test Set to produce the final Random Forest Model.
 
 
 ### Table of contents 📝 
@@ -46,9 +46,10 @@ In the Supervised Learning scenario with a Random Forest algorithm, the data was
 - "olist_sellers_dataset"
 
 **Scripts**
-- Data Understanding: "P_Olist_InitialEDA.py"
-- Data Preparation: "P_Olist_EDA_DataPreparation.py"
-- Modeling and Evaluation: "P_Olist_Modeling_KMeans.py"
+- The scripts should be run in the following order:
+  - Data Understanding: "P1_Olist_InitialEDA.py"
+  - Data Preparation: "P1_Olist_EDA_DataPreparation.py"
+  - Modeling and Evaluation: "P1_Olist_Modeling_KMeans.py" and "P1_Olist_Modeling_RandForest.py"
 
 **Presentation**
 - A presentation detailing the project findings and methodology, titled "Olist_Presentation," was developed in PPT and provided in PDF format.
