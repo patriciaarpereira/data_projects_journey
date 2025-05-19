@@ -52,7 +52,7 @@ DataCamp certification "Data Scientist Associate".
   - Modeling and Evaluation: "P1_Olist_Modeling_KMeans.py" and "P1_Olist_Modeling_RandForest.py"
 
 **Presentation**
-- A presentation detailing the project findings and methodology, titled "Olist_Presentation," was developed in PPT and provided in PDF format.
+- A presentation detailing the project findings and methodology, titled "P1_Olist_Presentation," was developed in PPT and provided in PDF format.
   - Business Understanding: "Project" and "Olist and Marketplace Benchmarking" slides.
   - Data Understanding: "Schema, Outliers and Missing Values" and "Initial Insights" slides.
   - Data Preparation: "Insights", "Insights per Retained Customer" and "Features Table" slides.
