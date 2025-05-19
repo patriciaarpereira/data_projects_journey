@@ -36,7 +36,7 @@ DataCamp certification "Data Scientist Associate".
 
 ### Table of contents 📝 
 
-**Datasets**
+**Datasets Directory**
 - "olist_customers_dataset.csv"
 - "olist_order_items_dataset.csv"
 - "olist_order_payments_dataset"
@@ -45,7 +45,7 @@ DataCamp certification "Data Scientist Associate".
 - "olist_products_dataset"
 - "olist_sellers_dataset"
 
-**Scripts**
+**Python Scripts Directory**
 - The scripts should be run in the following order:
   - Data Understanding: "P1_Olist_InitialEDA.py"
   - Data Preparation: "P1_Olist_EDA_DataPreparation.py"
