@@ -4,7 +4,7 @@
 
 ### Project Overview 📘
 
-The goal of this project is to first develop customer segments using clustering techniques and then build a predictive model to identify customers likely to make repeat purchases. This last model will be based on their purchase history, behavior, and derived customer segments, aiming to provide valuable insights for optimizing marketing efforts. The scope of the project involves analyzing a public e-commerce dataset from Olist Store, containing information on 100,000 orders placed between 2016 and 2018 across multiple marketplaces in Brazil.
+The goal of this project is to first develop customer segments using clustering techniques aiming to provide valuable insights for optimizing marketing efforts and then build a predictive model to identify customers likely to make repeat purchases. This last model will be based on their purchase history, behavior, and derived customer segments. The scope of the project involves analyzing a public e-commerce dataset from Olist Store, containing information on 100,000 orders placed between 2016 and 2018 across multiple marketplaces in Brazil.
 
 
 ### Technology 🐼
