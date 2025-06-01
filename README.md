@@ -48,7 +48,7 @@ DataCamp certification "Data Scientist Associate".
 **Python Scripts Directory**
 - The scripts should be run in the following order:
   - Data Understanding: "P1_Olist_InitialEDA.py"
-  - Data Preparation: "P1_Olist_EDA_DataPreparation.py"
+  - Data Preparation: "P1_Olist_InitialDataPreparation.py" and "P1_Olist_EDA_DataPreparation.py"
   - Modeling and Evaluation: "P1_Olist_Modeling_KMeans.py" and "P1_Olist_Modeling_RandForest.py"
 
 **Presentation**
