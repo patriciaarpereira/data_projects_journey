@@ -27,6 +27,7 @@ from scipy.stats import pearsonr, spearmanr
 sns.set(font_scale = 1.4)
 sns.set_style("ticks")
 sns.set_palette("winter")
+pad = 15
 
 blue_color = "#0000FF"
 insight_color = "#00FFFF"
@@ -78,13 +79,13 @@ sns.catplot(
     data = top_10_state,
     kind = "bar",
     palette = custom_palette_state)
-plt.title("Proportion of Clients per State", pad = 15, )
+plt.title("Proportion of Clients per State", pad = pad)
 plt.xlabel("Top 10 States")
 plt.ylabel("Proportion (%)")
 plt.show()                
                 
                 
-# Visualization - FacetGrid
+# Visualization
 sns.catplot(data = top_10_state_target,
             x = "customer_state",
             y = "prop_%",
@@ -92,7 +93,7 @@ sns.catplot(data = top_10_state_target,
             palette = [blue_color] + [insight_color],
             kind = "bar",
             dodge = False)
-plt.title("Proportion of Retained Customers by State", pad = 15)
+plt.title("Proportion of Retained Customers by State", pad = pad)
 plt.ylabel("Proportion (%)")
 plt.xlabel("")
 plt.show()
@@ -122,7 +123,7 @@ diff_days_df = features[["avg_diff_days_estdel_del",
                              columns = {"avg_review_score": "Review Score",
                              "target": "Retained"})
 
-# Visualization
+# Visualization - FacetGrid on Seaborn
 g = sns.relplot(data = diff_days_df,
             y = "avg_diff_days_estdel_del",
             x = "avg_diff_days_del_purch",
@@ -223,7 +224,7 @@ sns.catplot(data = features,
             y = "avg_freight_value",
             x = "target",
             kind = "point")
-plt.title("Average Freight Value per Customer", pad = 15)
+plt.title("Average Freight Value per Customer", pad = pad)
 plt.xlabel("Retained Customer")
 plt.ylabel("Average Freight Value")
 plt.show()
@@ -340,7 +341,7 @@ sns.heatmap(feat_corr.corr(method = "spearman"),
             annot = True,
             fmt = ".2f",
             cmap='Blues')
-plt.title("Spearman Correlation", pad = 15)
+plt.title("Spearman Correlation", pad = pad)
 plt.show()
 
 
@@ -387,7 +388,7 @@ sns.catplot(data = features,
             x = "pref_pay_type",
             y = "avg_n_installments",
             kind = "box")
-plt.title("Nº of Installments per Type of Payment", pad = 15)
+plt.title("Nº of Installments per Type of Payment", pad = pad)
 plt.ylabel("Average Nº of Installments")
 plt.xlabel("Preferred Type of Payment")
 plt.xticks(ticks = ["credit_card", "boleto", "voucher", "debit_card"],
@@ -459,7 +460,7 @@ sns.catplot(data = top_10_state_df,
             palette = custom_palette_state_mon_value,
             kind = "bar",
             order = top_10_state.index)
-plt.title("Average Monetary Value per State", pad = 15)
+plt.title("Average Monetary Value per State", pad = pad)
 plt.ylabel("Monetary Value")
 plt.xlabel("Top 10 States")
 plt.show()
@@ -484,7 +485,7 @@ sns.heatmap(features_num.corr(method = "spearman"),
             annot = True,
             fmt = ".2f",
             cmap='Blues')
-plt.title("Spearman Correlation", pad = 15)
+plt.title("Spearman Correlation", pad = pad)
 plt.show()
 
 
@@ -529,7 +530,7 @@ sns.heatmap(feature_table_num.corr(method = "spearman"),
             annot = True,
             fmt = ".2f",
             cmap='Blues')
-plt.title("Spearman Correlation", pad = 15)
+plt.title("Spearman Correlation", pad = pad)
 plt.show()
 
 

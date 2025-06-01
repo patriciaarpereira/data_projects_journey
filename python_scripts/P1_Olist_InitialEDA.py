@@ -28,6 +28,7 @@ from scipy.stats import mannwhitneyu
 sns.set(font_scale = 1.4)
 sns.set_style("ticks")
 sns.set_palette("winter")
+pad = 15
 
 blue_color = "#0000FF"
 insight_color = "#00FFFF"
@@ -37,7 +38,7 @@ insight_color = "#00FFFF"
 # --------------------------------------------------------------------
 # ### Customers Dataset ###
 
-customers = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_customers_dataset.csv")
+customers = pd.read_csv("olist_customers_dataset.csv")
 
 
 
@@ -72,8 +73,7 @@ customers["customer_unique_id"].duplicated().any()
 customers["customer_unique_id"].nunique()
 
 # Average nº of orders per client
-avg_n_ord_cust = customers[
-    "customer_id"].count() / customers[
+customers["customer_id"].count() / customers[
     "customer_unique_id"].nunique() 
 
         
@@ -96,7 +96,7 @@ sns.catplot(
     data = n_cli_state,
     kind = "bar",
     palette = custom_palette_state)
-plt.title("Proportion of Clients per State", pad = 15, )
+plt.title("Proportion of Clients per State", pad = pad)
 plt.xlabel("Top 10 States")
 plt.ylabel("Proportion (%)")
 plt.show()
@@ -136,7 +136,7 @@ with open(file_path, 'wb') as file:
 # --------------------------------------------------------------------
 # ### Orders Dataset ###
 
-orders = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_orders_dataset.csv")
+orders = pd.read_csv("olist_orders_dataset.csv")
 
 
 
@@ -191,15 +191,14 @@ n_ord_status_agg = (orders["order_status"].map({
         "Other").value_counts(normalize = True) * 100).reset_index(name = "prop")
 
 # Visualization
-custom_palette_ord = [insight_color] + [blue_color] * (
-    len(n_ord_status_agg) - 1)
+custom_palette_ord = [insight_color] + [blue_color] 
 
 sns.catplot(data = n_ord_status_agg,
             x = "prop",
             y = "order_status",
             kind = "bar",
             palette = custom_palette_ord)
-plt.title("Proportion of Orders")
+plt.title("Proportion of Orders", pad = pad)
 plt.xlabel("Proportion (%)")
 plt.ylabel("Status")
 plt.show()
@@ -223,7 +222,8 @@ plt.show()
 ## Analyze ##
 
 # Analyze orders over time
-orders_date = orders.resample("D", on = "order_purchase_timestamp")["order_id"].count()
+orders_date = orders.resample("D", on = "order_purchase_timestamp")[
+    "order_id"].count()
 
 # Visualization
 sns.relplot(data = orders_date,
@@ -233,7 +233,7 @@ plt.annotate("Black Friday", xy = (
     pd.Timestamp("2017-12-10"), 1100))
 plt.xlabel("Date")
 plt.ylabel("Nº of Orders")
-plt.title("Daily Orders")
+plt.title("Daily Orders", pad = pad)
 plt.show()
 
 # Identify max
@@ -265,7 +265,7 @@ with open(file_path, 'wb') as file:
 # --------------------------------------------------------------------
 # ### Payments Dataset ###
 
-payments = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_order_payments_dataset.csv")
+payments = pd.read_csv("olist_order_payments_dataset.csv")
 
 
 
@@ -329,7 +329,7 @@ n_pay_type = payments["payment_type"].value_counts(normalize = True)
 sns.catplot(
     data = n_pay_type,
     kind = "bar")
-plt.title("Proportion of Payments per Type", pad = 15)
+plt.title("Proportion of Payments per Type", pad = pad)
 plt.xticks(rotation = 45)
 plt.show()
 
@@ -337,7 +337,7 @@ plt.show()
 # Checking "not_defined" type
 payments[payments["payment_type"] == "not_defined"]
 
-# As they are only 3 orders and have no payment valye, they will be dropped
+# As they are only 3 orders and have no payment value, they will be dropped
 ind_drop = payments[payments["payment_type"] == "not_defined"].index
 payments.drop(index = ind_drop, inplace = True)
 
@@ -360,7 +360,7 @@ sns.catplot(data = payments,
             ci = False)
 plt.xlabel("Nº of Installments")
 plt.ylabel("Payment Value")
-plt.title("Payment Value per Nº of Installments", pad = 15)
+plt.title("Payment Value per Nº of Installments", pad = pad)
 plt.xticks(rotation = 90)
 plt.show()
 
@@ -393,7 +393,7 @@ with open(file_path, 'wb') as file:
 # --------------------------------------------------------------------
 # ### Products Dataset ###
 
-products = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_products_dataset.csv")
+products = pd.read_csv("olist_products_dataset.csv")
 
 
 
@@ -442,7 +442,7 @@ sns.catplot(
     data = top10_prod_cat ,
     kind = "bar")
 plt.xticks(rotation = 90)
-plt.title("Proportion of  Top 10 Categories by Products")
+plt.title("Proportion of  Top 10 Categories by Products", pad = pad)
 plt.show()
 
 
@@ -478,7 +478,7 @@ with open(file_path, 'wb') as file:
 # --------------------------------------------------------------------
 # ### Order Items Dataset ###
 
-order_items = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_order_items_dataset.csv")
+order_items = pd.read_csv("olist_order_items_dataset.csv")
 
 
 
@@ -576,14 +576,15 @@ sns.heatmap(data = freight_pivot,
             yticklabels = ["Not Outlier", "Outlier"],
             cmap = "Blues")
 plt.ylabel("")
-plt.title("Average Values per Freight Value Outlier Groups", pad = 15)
+plt.title("Average Values per Freight Value Outlier Groups", pad = pad)
 plt.show()
 
 # Hypothesis Test
 # H0: The distribution of product volume is the same for the Freight 
 # Value Outliers group and the Not Outliers group.
 # H1: The distribution of product volume for the Freight Value Outliers 
-# group is stochastically greater than the distribution of product volume for the Not Outliers group.
+# group is stochastically greater than the distribution of product volume for 
+# the Not Outliers group.
 
 prod_freight_val_analysis_df_na = prod_freight_val_analysis_df.dropna()
 
@@ -649,13 +650,13 @@ sns.catplot(data = price_out_categories,
             x = "prop",
             y = "product_category_name",
             kind = "bar")
-plt.title("Price Outliers per Category", pad = 15)
+plt.title("Price Outliers per Category", pad = pad)
 plt.xlabel("Proportion (%)")
 plt.ylabel("Top 10 Categories")
 plt.show()
 
 
-# Check notes for outliers analysis
+# Check notes section for outliers analysis
 
 
 # ----------------------------------------
@@ -728,7 +729,7 @@ with open(file_path, 'wb') as file:
 # --------------------------------------------------------------------
 # ### Sellers Dataset ###
 
-sellers = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_sellers_dataset.csv")
+sellers = pd.read_csv("olist_sellers_dataset.csv")
 
 
 
@@ -773,7 +774,7 @@ n_sel_state = sellers["seller_state"].value_counts(normalize = True).head(10)
 sns.catplot(
     data = n_sel_state,
     kind = "bar")
-plt.title("Proportion of Sellers per State")
+plt.title("Proportion of Sellers per State", pad = pad)
 plt.xlabel("Top 10 States")
 plt.show()
 
@@ -809,7 +810,7 @@ with open(file_path, 'wb') as file:
 # --------------------------------------------------------------------
 # ### Reviews Dataset ###
 
-reviews = pd.read_csv("C:/Users/perei/OneDrive/Documentos/Data Projects Journey/P1_Olist_20250504/Dataset/olist_order_reviews_dataset.csv")
+reviews = pd.read_csv("olist_order_reviews_dataset.csv")
 
 
 
